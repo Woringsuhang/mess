@@ -1,4 +1,4 @@
-module github.com/Woringsuhang/message
+module github.com/Woringsuhang/mess
 
 go 1.20
 
