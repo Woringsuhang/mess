@@ -9,9 +9,54 @@ message LoginRequest {
 }
 
 message LoginResponse {
-  string msg = 1;
 }
 
+message Users{
+  int64  id       = 10;
+  string username = 20;
+  string password = 30;
+  string mobile   = 40;
+  int64  age      = 50;
+  Sex    sex      = 60;
+  string address  = 70;
+}
+enum Sex {
+  Default = 0;
+  Man     = 10;
+  WoMan   = 20;
+}
+message GetUserRequest{
+   int64 id = 10;
+}
+message GetUserResponse{
+  repeated Users data=10;
+}
+
+message CreateUserRequest{
+  Users user=10;
+}
+message CreateUserResponse{
+
+}
+
+message UpdateUserRequest{
+    int64 id = 10;
+}
+message UpdateUserResponse{
+    Users data=10;
+}
+
+message DeleteUserRequest{
+    int64 id = 10;
+}
+
+message DeleteUserResponse{
+
+}
 service User {
   rpc Login(LoginRequest) returns(LoginResponse);
+  rpc GetUser(GetUserRequest) returns(GetUserResponse);
+  rpc CreateUser(CreateUserRequest) returns(CreateUserResponse);
+  rpc UpdateUser(UpdateUserRequest) returns(UpdateUserResponse);
+  rpc DeleteUser(DeleteUserRequest) returns(DeleteUserResponse);
 }
