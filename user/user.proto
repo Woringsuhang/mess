@@ -36,14 +36,14 @@ message CreateUserRequest{
     Users user=10;
 }
 message CreateUserResponse{
-    Users user=10;
+    repeated Users data=10;
 }
 
 message UpdateUserRequest{
     int64 id = 10;
 }
 message UpdateUserResponse{
-    Users data=10;
+    repeated Users data=10;
 }
 
 message DeleteUserRequest{
