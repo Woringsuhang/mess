@@ -40,7 +40,7 @@ message CreateUserResponse{
 }
 
 message UpdateUserRequest{
-    int64 id = 10;
+    Users data=10;
 }
 message UpdateUserResponse{
     repeated Users data=10;
