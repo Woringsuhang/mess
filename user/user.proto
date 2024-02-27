@@ -26,17 +26,17 @@ enum Sex {
   WoMan   = 20;
 }
 message GetUserRequest{
-   int64 id = 10;
+    int64 id = 10;
 }
 message GetUserResponse{
-  repeated Users data=10;
+    repeated Users data=10;
 }
 
 message CreateUserRequest{
-  Users user=10;
+    Users user=10;
 }
 message CreateUserResponse{
-
+    Users user=10;
 }
 
 message UpdateUserRequest{
