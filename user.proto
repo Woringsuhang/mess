@@ -31,6 +31,7 @@ message GetUserRequest{
 }
 message GetUserResponse{
     repeated Users data=10;
+    string token=20;
 }
 
 message CreateUserRequest{
