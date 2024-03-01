@@ -9,6 +9,7 @@ message LoginRequest {
 }
 
 message LoginResponse {
+  repeated Users data=10;
 }
 
 message Users{
